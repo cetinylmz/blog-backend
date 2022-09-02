@@ -14,9 +14,7 @@ const resolvers = require("./Graphql/Resolvers");
 
 const port = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World! TO 3");
-});
+
 
 const server = new ApolloServer({
   typeDefs,
