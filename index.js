@@ -15,9 +15,13 @@ const resolvers = require("./Graphql/Resolvers");
 const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
-  res.send("Hello World! TO 2");
+  res.send("Hello World! TO 3");
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+;
+
+app.listen(port, async () => {
+  mongoose.connect(process.env.MONGODB_URI);
+
+  console.log("RUN SERVER ");
 });
