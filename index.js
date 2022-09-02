@@ -11,6 +11,6 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-server.listen( 5000, async () => {
+app.listen( process.env.PORT || 5000, async () => {
   console.log("RUN SERVER ");
 });
