@@ -1,8 +1,0 @@
-type Mutation {
-  createPost(data: createPostInput): Post
-}
-
-input createPostInput {
-  title: String!
-  description: String!
-}

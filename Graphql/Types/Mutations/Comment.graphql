@@ -1,8 +1,0 @@
-type Mutation {
-  createComment(data: createCommentInput): Comment
-}
-
-input createCommentInput {
-  text: String!
-  post: ID!
-}
