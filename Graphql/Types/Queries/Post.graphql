@@ -1,0 +1,17 @@
+type Query {
+  getPosts: [Post]
+  getPost(id: ID): Post
+}
+
+
+
+type Post {
+  _id: ID!
+  title: String!
+  description: String!
+  likeCount: Int!
+  commentCount: Int!
+  user: ID!
+  comments:[Comment]
+  users:[User]
+}
