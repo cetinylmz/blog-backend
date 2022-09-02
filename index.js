@@ -1,16 +1,11 @@
-const { ApolloServer } = require("apollo-server");
-const {
-  ApolloServerPluginLandingPageGraphQLPlayground,
-} = require("apollo-server-core");
-
-const mongoose = require("mongoose");
-
-require("dotenv").config();
+const express = require('express')
+const app = express()
+const port = process.env.PORT||5000
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen( process.env.PORT || 5000, async () => {
-  console.log("RUN SERVER ");
-});
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
