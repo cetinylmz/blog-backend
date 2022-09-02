@@ -13,7 +13,8 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: ({ req }) => ({ req }),
-
+  plugins: [ApolloServerPluginLandingPageGraphQLPlayground({})],
+  introspection: true,
 });
 
 server.listen(5000, async () => {
