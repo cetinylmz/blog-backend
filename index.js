@@ -18,9 +18,15 @@ app.get("/", (req, res) => {
   res.send("Hello World! TO 3");
 });
 
-;
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: ({ req }) => ({ req }),
+  plugins: [ApolloServerPluginLandingPageGraphQLPlayground({})],
+});
 
-app.listen(port, async () => {
+
+server.listen(port, async () => {
   mongoose.connect(process.env.MONGODB_URI);
 
   console.log("RUN SERVER ");
